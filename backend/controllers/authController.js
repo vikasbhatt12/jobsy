@@ -17,7 +17,7 @@ exports.register = async(req, res, next) =>{
   }
 };
 
-exports.login = async(req, res, next){
+exports.login = async(req, res, next)=> {
     try{
         const {email, password} = res.body;
 
@@ -42,6 +42,16 @@ exports.login = async(req, res, next){
         res.status(400).json({ success: false, error: error.message });
 
     }
+};
+
+exports.getMe = async (req, res, next) => {
+  
+  const user = await User.findById(req.user.id);
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
 };
 
 const sendTokenResponse = (user, statusCode, res) => {
