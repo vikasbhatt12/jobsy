@@ -1,4 +1,4 @@
-# Colbin - Full-Stack Recruitment Platform Prototype
+# Jobsy - Full-Stack Recruitment Platform Prototype
 
 This is a full-stack web application built with the MERN stack technology. It features a complete user authentication system using a MERN stack (MongoDB, Express, React, Node.js).
 
